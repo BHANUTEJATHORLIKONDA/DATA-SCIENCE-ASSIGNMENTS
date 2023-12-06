@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Aug 20 10:31:05 2023
+
+@author: sksha
+"""
+
+import  pandas as pd
+df = pd.read_csv("Q9_a (1).csv")
+df
+df.shape
+df.info()
+df.dtypes
+df.describe()
+df.isnull().sum()
+
+df["speed"].describe()
+df["speed"].hist()               #negatively skewed (Mean<Median<Mode)
+df["speed"].skew().round(2)      #-0.12
+df["speed"].kurt().round(2)      #-0.51
+
+df["dist"].describe()
+df["dist"].hist()               #positively skewed (Mode<Median<Mean)
+df["dist"].skew().round(2)      #0.81
+df["dist"].kurt().round(2)      #0.41
+
+
+
+
+
